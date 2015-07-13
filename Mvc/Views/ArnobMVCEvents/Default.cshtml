@@ -1,0 +1,15 @@
+@model SitefinityWebApp.Mvc.Models.ArnobMVCEventsModel
+
+<div style="padding:10px;">
+@if(Model.Events!=null)
+{
+<h2 class="sfeventTitle sftitle">
+  @Html.Raw(Model.Events.Title )
+</h2>
+   <div class="sfeventMetaInfo sfmetainfo">
+       <strong>Start: </strong> @Html.Raw(Model.Events.EventStart)<br />
+       <strong>End: </strong>@if(Model.Events.EventEnd!=null){ @Html.Raw(Model.Events.EventEnd)}<br />
+       <strong>Venue: </strong>@if(Model.Events.Street!=null){ @Html.Raw(Model.Events.Street)}
+   </div>
+}
+</div>
